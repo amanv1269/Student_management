@@ -55,7 +55,7 @@ public class StudentController {
 	    studentService.saveStudent(student);
 	    System.out.println(student);
 
-	    return "redirect:/student";
+	    return "redirect:/";
 	}
 	
 	@GetMapping("/student/edit/{id}")
@@ -73,14 +73,14 @@ public class StudentController {
 		existing.setEmail(student.getEmail());
 		
 		studentService.updateStudent(existing);
-		return "redirect:/student";
+		return "redirect:/";
 	}
 	
 	@GetMapping("/student/delete/{id}")
 	public String delete(@PathVariable Long id,Model model) {
 	
 		studentService.deleteStudent(id);
-		return "redirect:/student";
+		return "redirect:/";
 	}
 	
 	
