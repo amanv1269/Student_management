@@ -33,7 +33,8 @@ public class StudentController {
 		this.studentReposatory = studentReposatory;
 	}
 
-	@GetMapping("/student")
+	//@GetMapping("/student")
+	@GetMapping("/")
 	public String allStudent(Model model){
 		System.out.println("application is running ");
 		model.addAttribute("allStudent", studentReposatory.findAll());
